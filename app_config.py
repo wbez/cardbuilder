@@ -23,20 +23,21 @@ PROJECT_FILENAME = 'cardbuilder'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'cardbuilder'
-GITHUB_USERNAME = 'nprapps'
+GITHUB_USERNAME = 'wbezapps'
 REPOSITORY_URL = 'git@github.com:%s/%s.git' % (GITHUB_USERNAME, REPOSITORY_NAME)
 REPOSITORY_ALT_URL = None # 'git@bitbucket.org:nprapps/%s.git' % REPOSITORY_NAME'
 
 """
 DEPLOYMENT
 """
-PRODUCTION_S3_BUCKET = 'apps.npr.org'
+PRODUCTION_S3_BUCKET = 'cardbuilder.wbez.org'
 
-STAGING_S3_BUCKET = 'stage-apps.npr.org'
+STAGING_S3_BUCKET = 'stage-cardbuilder.wbez.org'
 
 DEFAULT_MAX_AGE = 20
 
-PRODUCTION_SERVERS = ['54.211.90.44']
+# cardbuilder instance
+PRODUCTION_SERVERS = ['34.227.222.87']
 STAGING_SERVERS = ['54.210.206.115']
 
 SEAMUS_URL = 'http://www.npr.org/2017/06/02/526417478/the-trump-russia-comey-imbroglio-it-s-complicated'
