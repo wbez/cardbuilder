@@ -24,7 +24,8 @@ PROJECT_FILENAME = 'cardbuilder'
 # The name of the repository containing the source
 REPOSITORY_NAME = 'cardbuilder'
 GITHUB_USERNAME = 'wbezapps'
-REPOSITORY_URL = 'git@github.com:%s/%s.git' % (GITHUB_USERNAME, REPOSITORY_NAME)
+GITHUB_ORG = 'wbez'
+REPOSITORY_URL = 'git@github.com:%s/%s.git' % (GITHUB_ORG, REPOSITORY_NAME)
 REPOSITORY_ALT_URL = None # 'git@bitbucket.org:nprapps/%s.git' % REPOSITORY_NAME'
 
 """
@@ -45,7 +46,7 @@ SEAMUS_URL = 'http://www.npr.org/2017/06/02/526417478/the-trump-russia-comey-imb
 # Should code be deployed to the web/cron servers?
 DEPLOY_TO_SERVERS = True
 
-SERVER_USER = 'ubuntu'
+SERVER_USER = 'cardbuilder'
 SERVER_PYTHON = 'python3'
 SERVER_PROJECT_PATH = '/home/%s/apps/%s' % (SERVER_USER, PROJECT_FILENAME)
 SERVER_REPOSITORY_PATH = '%s/repository' % SERVER_PROJECT_PATH

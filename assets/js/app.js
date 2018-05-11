@@ -7,10 +7,10 @@ import sortBy from 'lodash/sortBy';
 let BASE_GRAPHIC_URL = null;
 
 if (DEPLOYMENT_TARGET === 'production') {
-    BASE_GRAPHIC_URL = 'https://apps.npr.org/dailygraphics/graphics/trump-card-wireframe-20170410/child.html'
+    BASE_GRAPHIC_URL = 'https://s3.amazonaws.com/wbez-dailygraphics/dailygraphics/graphics/cardbuilder-wireframe/child.html'
 } else {
-    BASE_GRAPHIC_URL = 'https://s3.amazonaws.com/stage-apps.npr.org/dailygraphics/graphics/trump-card-wireframe-20170410/child.html'
-}
+    BASE_GRAPHIC_URL = 'https://s3.amazonaws.com/wbez-stage-dailygraphics/dailygraphics/graphics/cardbuilder-wireframe/child.html'
+}}
 
 class App extends React.Component {
     constructor(props) {
