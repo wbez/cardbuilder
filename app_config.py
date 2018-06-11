@@ -33,7 +33,7 @@ DEPLOYMENT
 """
 PRODUCTION_S3_BUCKET = 'cardbuilder.wbez.org'
 
-STAGING_S3_BUCKET = 'stage-cardbuilder.wbez.org'
+STAGING_S3_BUCKET = 'cardbuilder-stage'
 
 DEFAULT_MAX_AGE = 20
 
@@ -58,7 +58,7 @@ DEPLOY_CRONTAB = False
 
 # Should the service configurations be installed on the servers?
 # If True, DEPLOY_TO_SERVERS must also be True
-DEPLOY_SERVICES = True
+DEPLOY_SERVICES = False
 
 UWSGI_SOCKET_PATH = '/run/uwsgi/%s.uwsgi.sock' % PROJECT_FILENAME
 
@@ -148,7 +148,7 @@ def configure_targets(deployment_target):
         LOG_LEVEL = logging.DEBUG
         DEBUG = False
     else:
-        S3_BUCKET = None
+        S3_BUCKET = STAGING_S3_BUCKET
         S3_BASE_URL = 'http://127.0.0.1:8000'
         S3_DEPLOY_URL = None
         SERVERS = []

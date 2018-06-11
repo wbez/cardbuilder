@@ -14,9 +14,9 @@ from slugify import slugify
 DEPLOYMENT_TARGET = os.environ.get('DEPLOYMENT_TARGET', None)
 
 if DEPLOYMENT_TARGET == 'production':
-    S3_BUCKET = 'apps.npr.org'
+    S3_BUCKET = 'cardbuilder.wbez.org'
 else:
-    S3_BUCKET = 'stage-apps.npr.org'
+    S3_BUCKET = 'cardbuilder-stage'
 
 
 @receiver(post_save, sender=Card)

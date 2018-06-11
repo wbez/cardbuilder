@@ -163,17 +163,18 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', None)
 
 if app_config.DEPLOYMENT_TARGET != 'production':
     AWS_DEFAULT_ACL = 'private'
-    AWS_STORAGE_BUCKET_NAME = 'stage-apps.npr.org'
+    AWS_STORAGE_BUCKET_NAME = 'cardbuilder-stage'
     AWS_S3_CUSTOM_DOMAIN = 's3.amazonaws.com/{0}'.format(
         AWS_STORAGE_BUCKET_NAME,
     )
 else:
-    AWS_STORAGE_BUCKET_NAME = 'apps.npr.org'
+    AWS_STORAGE_BUCKET_NAME = 'cardbuilder.wbez.org'
     AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME
 
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400'
 }
+
 AWS_LOCATION = '/{0}/static'.format(app_config.PROJECT_SLUG)
 
 STATIC_URL = 'https://{0}/'.format(AWS_S3_CUSTOM_DOMAIN)
