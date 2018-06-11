@@ -5,3 +5,4 @@ assets/bundles/*
 assets/dists/*
 data/*.json
 confs/rendered
+*.pyc
