@@ -38,10 +38,10 @@ STAGING_S3_BUCKET = 'cardbuilder-stage'
 DEFAULT_MAX_AGE = 20
 
 # cardbuilder instance
-PRODUCTION_SERVERS = ['34.227.222.87']
+PRODUCTION_SERVERS = ['34.227.107.163']
 STAGING_SERVERS = ['54.210.206.115']
 
-SEAMUS_URL = 'http://www.npr.org/2017/06/02/526417478/the-trump-russia-comey-imbroglio-it-s-complicated'
+SEAMUS_URL = 'http://www.wbez.org/'
 
 # Should code be deployed to the web/cron servers?
 DEPLOY_TO_SERVERS = True
